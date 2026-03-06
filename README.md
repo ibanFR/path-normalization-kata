@@ -1,31 +1,7 @@
-# Just the Docs Template
+# Path Normalization Kata
 
-Just the Docs template for creating the Documentation site for a GitHub repository. This template repository includes:
-
-- A [Jekyll] site configured with the [Just the Docs] theme, located in the `docs` folder
-- A copy of the [Creative Commons Attribution-ShareAlike 4.0 International License](LICENSE-CC-BY-SA-4.0) in the
-  repository root. This license applies to all site documentation content
-- A GitHub [Actions workflow] in the `.github/workflows` folder to build and deploy the site to GitHub Pages
-- A Java project in the `java` folder, configured with Maven for building and testing
-- A copy of the [MIT License] for the source code in the language specific folders (e.g., `java`), located in the repository
-- A GitHub Actions workflow for building and testing the Java project, located in `.github/workflows/java-build-test.yml`
-- A Notice file for third-party attributions in the repository root
-
-## Getting started
-
-To get started with creating a site, simply:
-
-1. Copy the [docs](docs) folder and [.github/workflows/pages.yml](.github/workflows/pages.yml) file into your
-   repository.
-2. Copy the [LICENSE-CC-BY-SA-4.0](LICENSE-CC-BY-SA-4.0) and [NOTICE](NOTICE) files into your repository root.
-3. Go to Settings > Pages > Build and deployment > Source, and select GitHub Actions
-
-After completing the creation of your new site on GitHub, update it as needed:
-
-- `_config.yml` (site title, description, and repository URL)
-- `README.md` (information for those who access your site repo on GitHub)
-- `NOTICE` (attributions for any third-party content you use in your site)
-- `java/pom.xml` (project name, dependencies, and other configurations for the Java project)
+Write a test list for a function that takes a relative path as a string and returns its normalized equivalent. A path
+may contain "." and ".." with the usual meanings.
 
 ## Java Project
 
