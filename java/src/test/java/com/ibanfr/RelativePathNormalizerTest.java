@@ -2,6 +2,7 @@ package com.ibanfr;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 /**
@@ -16,6 +17,17 @@ class RelativePathNormalizerTest {
     // input: "", output: "", should return an empty path when the input is empty
     // input: "a", output: "a", should return the same path
     // input: "a/b", output: "a/b", should return the same path when there are multiple levels
+
+    @Test
+    @DisplayName("should return an empty path when the input is empty")
+    void should_return_an_empty_path_when_the_input_is_empty() {
+
+        //when
+        var normalizedPath = RelativePathNormalizer.normalize("");
+
+        //then
+        assertThat(normalizedPath).isEmpty();
+    }
 
     // Normalize redundant separators
     // input: "/", output: "", should return the root directory when the input is a single separator
@@ -65,12 +77,10 @@ class RelativePathNormalizerTest {
     // input: "../a/./b", output: "../a/b", should keep the parent directory marker and resolve the current directory marker in the middle of the path
     
     
-    
-    /**
-     * Rigorous Test :-)
-     */
-    @Test
-    void shouldAnswerWithTrue() {
-        assertThat(true).isTrue();
+
+    private class RelativePathNormalizer {
+        public static String normalize(String relativePath) {
+            return "";
+        }
     }
 }
